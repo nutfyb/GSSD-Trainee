@@ -1,0 +1,58 @@
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="card" style="z-index: 1;background-color: #7743dd;">
+        </div>
+        <div class="card" style="z-index: 2;background-color: #2678af;">
+        </div>
+        <div class="card" style="z-index: 3;background-color: #c2cc33;">
+        </div>
+    </div>
+</body>
+
+<style>
+    body {
+        background-color: #ffffff;
+        font-family: 'Open Sans', sans-serif;
+    }
+    
+    .container {
+        position: absolute;
+        height: 300px;
+        width: 600px;
+        top: 60px;
+        left: calc(100% - 1000px);
+        display: flex;
+    }
+    
+    .card {
+        display: flex;
+        height: 280px;
+        width: 200px;
+        background-color: #17141d;
+        border-radius: 10px;
+        box-shadow: -1rem 0 3rem #000;
+        margin-left: -50px;
+        transition: 0.4s ease-out;
+        position: relative;
+        left: 0px;
+    }
+    
+    .card:not(:first-child) {
+        margin-left: -50px;
+    }
+    
+    .card:hover {
+        transition: 0.4s ease-out;
+    }
+    
+    .card:hover~.card {
+        transform: translateX(10px);
+        position: relative;
+        left: 50px;
+        transition: 0.4s ease-out;
+    }
+</style>
